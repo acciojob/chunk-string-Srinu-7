@@ -14,4 +14,9 @@ function stringChop(str, size) {
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = parseInt(prompt("Enter Chunk Size."), 10);
-alert(stringChop(str, size).join(", "));
+
+// Normalize the chunks by removing any extra spaces
+const normalizedChunks = stringChop(str, size).map(chunk => chunk.trim());
+
+// Display the result as an alert with the chunks joined by commas
+alert(normalizedChunks.join(", "));
